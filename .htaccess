@@ -1,0 +1,21 @@
+#regla para evitar uso de .php SOLO AFECTA A LA VISTA
+RewriteEngine on
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(,*)$ $1.php
+
+RewriteRule ^login$ views/login.view.php [L]
+RewriteRule ^registro$ views/registro.view.php [L]
+RewriteRule ^inicio$ views/index.view.php [L]
+RewriteRule ^cerrar$ controllers/cerrar.php [L]
+RewriteRule ^administrador$ views/admin.view.php [L]
+RewriteRule ^recuperar_contra$ views/recuperar_contra.view.php [L]
+RewriteRule ^nueva_contra$ views/nueva_contra.view.php [L]
+RewriteRule ^pedido$ views/pedido.view.php [L]
+RewriteRule ^carrito$ views/carrito.view.php [L]
+RewriteRule ^editar_pedido$ views/editar_pedido.view.php [L]
+RewriteRule ^mi_cuenta$ views/mi_cuenta.view.php [L]
+RewriteRule ^pagos$ views/pagos.view.php [L]
+RewriteRule ^historial$ views/historial.view.php [L]
+RewriteRule ^pedidos$ views/pedidos.view.php [L]
